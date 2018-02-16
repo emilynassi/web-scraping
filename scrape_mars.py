@@ -67,7 +67,7 @@ def scrape():
     mars_facts_url = 'https://space-facts.com/mars/'
     tables_df = pd.read_html(mars_facts_url)[0]
     tables_df.columns = ["Description", "Value"]
-    html_table = tables_df.to_html(header = False, index = False)
+    html_table = tables_df.to_html(index = False)
 
     mars_news['mars_facts'] = html_table
     
